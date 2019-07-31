@@ -18,4 +18,14 @@ Further investigation to this attack will lead to the [court filing] (https://ww
 
 > Capital One examined (a) GitHub file, ... determined that the April 21 File contained the IP address for a specific server. A firewall misconfiguration permitted commands to reach and be executed by that server, which enabled access to folders or buckets of data...
 
-Based on the archive name (ISRM-WAF-ROLE) the best I can assume is that this improperly secured server had credential access for the aforementioned role (likely by some way of caching or potentially by way of AWS Instance Profiles) 
+Based on the archive name (ISRM-WAF-ROLE) the best I can assume is that this improperly secured server had credential access for the aforementioned role (likely by some way of caching or potentially by way of AWS Instance Profiles) and this role was used to sync (exfil) the contents of the PII-containing-buckets.
+
+## Conclusion
+
+I don't think any of the news hype was scaremongering, there was definitely a large leak of PII and I don't believe this benefits anyone (maybe perimeter security as a service companies?). I think the only bits missing are the more technical pieces that contributed to the leak: 
+
+* Why such broad access to this role? 
+* Why such a powerful role? (Named for AWS WAF presumably but has access to all these S3 buckets?) 
+* How can we audit to prevent misconfiguration?
+
+It's a good lesson in IAM/ISRM management, it had accurate reporting around it, and it's good consumers are aware so they can take steps to secure themselves.
