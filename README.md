@@ -28,4 +28,6 @@ I don't think any of the news hype was scaremongering, there was definitely a la
 * Why such a powerful role? (Named for AWS WAF presumably but has access to all these S3 buckets?) 
 * How can we audit to prevent misconfiguration?
 
-It's a good lesson in IAM/ISRM management, it had accurate reporting around it, and it's good consumers are aware so they can take steps to secure themselves.
+It's a good lesson in IAM/ISRM management, it had accurate reporting around it, and it's good consumers are aware so they can take steps to secure themselves. Finally, a [hilarious tweet] (https://twitter.com/cwarzel/status/1156178208003252225) commenting on Capital One's PR:
+
+![Le Tweet](https://pbs.twimg.com/media/EAuR80sUwAIEEzF.jpg)
