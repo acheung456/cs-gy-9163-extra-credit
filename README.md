@@ -12,9 +12,9 @@ Many news outlets reported on a data breach at Capital One yesterday (2019/07/30
 
 There is no doubt that a large amount of PII (Personally Identifiable Information) was leaked, so while the titles of many of these articles trend click-baity, there is truth behind it. In order to scrutinize for accuracy I'd like to take a look at exactly what the *hack* was that *exploited a vulnerability*.
 
-Krebs on Security also has a great article on this that [goes a little deeper] (https://krebsonsecurity.com/2019/07/capital-one-data-theft-impacts-106m-people/) where we learn about the hackers previous employment at Amazon (Specifically in the S3 area, which was the destination of the attack) and about the hackers activity and incriminating messages left in other open spaces (Twitter, Meetup, Slack). This article points out a file, `ISRM-WAF-ROLE.tar.xz`, and names it as the one that belonged to Capital One but leaves it at that.
+Krebs on Security also has a great article on this that [goes a little deeper](https://krebsonsecurity.com/2019/07/capital-one-data-theft-impacts-106m-people/) where we learn about the hackers previous employment at Amazon (Specifically in the S3 area, which was the destination of the attack) and about the hackers activity and incriminating messages left in other open spaces (Twitter, Meetup, Slack). This article points out a file, `ISRM-WAF-ROLE.tar.xz`, and names it as the one that belonged to Capital One but leaves it at that.
 
-Further investigation to this attack will lead to the [court filing] (https://www.dropbox.com/s/z7u5rxcdajuvw6t/19718675504.pdf?dl=0) for the case. In this we learn that...
+Further investigation to this attack will lead to the [court filing](https://www.dropbox.com/s/z7u5rxcdajuvw6t/19718675504.pdf?dl=0) for the case. In this we learn that...
 
 > Capital One examined (a) GitHub file, ... determined that the April 21 File contained the IP address for a specific server. A firewall misconfiguration permitted commands to reach and be executed by that server, which enabled access to folders or buckets of data...
 
@@ -28,6 +28,6 @@ I don't think any of the news hype was scaremongering, there was definitely a la
 * Why such a powerful role? (Named for AWS WAF presumably but has access to all these S3 buckets?) 
 * How can we audit to prevent misconfiguration?
 
-It's a good lesson in IAM/ISRM management, it had accurate reporting around it, and it's good consumers are aware so they can take steps to secure themselves. Finally, a [hilarious tweet] (https://twitter.com/cwarzel/status/1156178208003252225) commenting on Capital One's PR:
+It's a good lesson in IAM/ISRM management, it had accurate reporting around it, and it's good consumers are aware so they can take steps to secure themselves. Finally, a [hilarious tweet](https://twitter.com/cwarzel/status/1156178208003252225) commenting on Capital One's PR:
 
 ![Le Tweet](https://pbs.twimg.com/media/EAuR80sUwAIEEzF.jpg)
